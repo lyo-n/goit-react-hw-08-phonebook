@@ -24,11 +24,6 @@ const SignUp = () => {
         setPassword(target.value);
     };
 
-    // const inputSubmit = (e) => {
-    //     e.preventSefault();
-    //     dispatch(action.registrationUser({name, email, password}));
-    // };
-
     const inputSubmit = event => {
       event.preventDefault();
       const newContact = { email, name, password };
