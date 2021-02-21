@@ -9,7 +9,7 @@ const UserMenu = ({ avatar, name, onLogout }) => (
     <div className={styles.userMenu}>
     <div className={styles.container}>
       <img src={avatar} alt="" width="32" className={styles.avatar} />
-      <span className={styles.name}> {name}</span>
+      <span className={styles.name}>{name}</span>
       <Button
       className={styles.btn}
         variant="contained"

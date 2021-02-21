@@ -1,18 +1,17 @@
 import React, {Suspense} from 'react';
 import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
-import routes from '../router';
+import routes from '../routes';
 import PrivateRoute from '../service/privateRoute';
 import PublicRoute from '../service/publicRoute';
-import AppBar from '../components/app/appBar'
+import AppBar from '../components/app/appBar';
 import  './app/app.module.css';
 
 
 const APP = () =>{
     return (
         <BrowserRouter>
-        <div>
           <AppBar />
-          <Suspense fallback={<h1></h1>}>
+          <Suspense fallback={<h1>Loading...</h1>}>
             <Switch>
               {routes.map(route => {
                 return route.private ? (
@@ -28,7 +27,6 @@ const APP = () =>{
               <Redirect to="/login" />
             </Switch>
           </Suspense>
-        </div>
       </BrowserRouter>
     );
 };

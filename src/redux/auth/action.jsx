@@ -1,7 +1,7 @@
 import axios from 'axios';
 import actionOperations from './actionOperations';
 
-axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com/';
+axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com';
 
 const token = {
     set(token){
@@ -15,18 +15,18 @@ const token = {
 const registrationUser = credential => dispatch => {
     dispatch(actionOperations.registerRequest());
     axios
-        .post('/users/signup', credential)
+        .post('users/signup', credential)
         .then(response => {
             token.set(response.data.token);
-            dispatch(actionOperations.regasterSuccess(response.data));
+            dispatch(actionOperations.registerSuccess(response.data));
         })
-        .catch(error => dispatch(actionOperations.regasterError(error)));
+        .catch(error => dispatch(actionOperations.registerError(error)));
 };
 
 const authorizationUser = credential => dispatch => {
     dispatch(actionOperations.loginRequest());
     axios
-        .post('/users/logIn', credential)
+        .post('users/login', credential)
         .then(response => {
             token.set(response.data.token);
             dispatch(actionOperations.loginSuccess(response.data));
@@ -43,7 +43,7 @@ const getCurrentUser = () => (dispatch, getState) => {
     token.set(persistToken);
     dispatch(actionOperations.getCurrentRequest());
     axios
-        .get('/users/current')
+        .get('users/current')
         .then(({data}) => dispatch(actionOperations.getCurrentSuccess(data)))
         .catch(error => actionOperations.getCurrentError(error));
 };
@@ -51,7 +51,7 @@ const getCurrentUser = () => (dispatch, getState) => {
 const logoutUser = () => dispatch => {
     dispatch(actionOperations.logoutRequest());
     axios
-        .post('/users/logout')
+        .post('users/logout')
         .then(() => {
             token.unset();
             dispatch(actionOperations.logoutSuccess());
@@ -59,12 +59,11 @@ const logoutUser = () => dispatch => {
         .catch(error => dispatch(actionOperations.logoutError(error)));
 };
 
-// const authOperation =
-export default {
+const action = {
     registrationUser,
     authorizationUser,
     getCurrentUser,
     logoutUser,
 };
 
-// export default authOperation;
+export default action;

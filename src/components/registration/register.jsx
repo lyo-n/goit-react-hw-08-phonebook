@@ -5,6 +5,7 @@ import { Button, TextField } from '@material-ui/core';
 import styles from './registration.module.css';
 
 
+
 const SignUp = () => {
     const dispatch = useDispatch();
 
@@ -23,10 +24,24 @@ const SignUp = () => {
         setPassword(target.value);
     };
 
-    const inputSubmit = (e) => {
-        e.preventSefault();
-        dispatch(action.registrationUser({name, email, password}));
+    // const inputSubmit = (e) => {
+    //     e.preventSefault();
+    //     dispatch(action.registrationUser({name, email, password}));
+    // };
+
+    const inputSubmit = event => {
+      event.preventDefault();
+      const newContact = { email, name, password };
+      dispatch(action.registrationUser(newContact));
+      reset();
     };
+  
+    const reset = () => {
+      setEmail('');
+      setName('');
+      setPassword('');
+    };
+
 
 return (
     <form className={styles.form}>

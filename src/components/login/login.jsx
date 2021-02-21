@@ -40,6 +40,7 @@ const LoginMain = () => {
             label="password"
             type="password"
             name="password"
+            autoComplete="on"
             value={password}
             onChange={inputPass}/>
         </div>

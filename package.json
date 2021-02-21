@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://lyo-n.github.io/goit-react-hw-08-phonebook",
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -18,6 +19,7 @@
     "react-css-transition": "^0.7.4",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-transition-group": "^4.4.1",
     "redux-persist": "^6.0.0",
