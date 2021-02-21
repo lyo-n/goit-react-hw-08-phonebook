@@ -1,0 +1,23 @@
+.userMenu{
+    position: relative;
+    margin-top: -50px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 185px;
+}
+.avatar {
+    margin-right: 4;
+    width: 30px;
+}
+.name {
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 16px;
+}
+.btn{
+    width: 50px;
+    height: 25px;
+}

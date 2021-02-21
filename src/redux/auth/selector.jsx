@@ -1,0 +1,6 @@
+const isAuthenticated = state => state.auth.token;
+const usersName = state => state.auth.user.name;
+const loading = state => state.auth.loading;
+const error = state => state.auth.error;
+
+export default {isAuthenticated, usersName, loading, error};

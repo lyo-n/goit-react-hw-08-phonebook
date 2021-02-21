@@ -1,0 +1,20 @@
+.form{
+    width: 200px;
+    height: 150px;
+    margin-left: 40%;
+}
+.box{  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.btnBox{
+    margin-left: 60px;
+    margin-top: 95px;
+}
+.btn{
+    height: 35px;
+    width: 80px;   
+    background-color: green;
+}
+

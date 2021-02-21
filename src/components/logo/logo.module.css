@@ -1,0 +1,17 @@
+.logo {
+    margin-left: 41%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: blue ;
+  }
+  
+  .appear {
+    transform: translateX(-100%);
+  }
+  
+  .appearActive {
+    transform: translateX(0);
+    transition: transform 500ms linear;
+  }
+  

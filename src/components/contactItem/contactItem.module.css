@@ -1,0 +1,12 @@
+.item{
+    list-style-type: none;
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+.btn{
+    height: 18px;
+}
